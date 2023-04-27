@@ -75,7 +75,7 @@ class Items {
 class VolumeInfo {
   String? title;
   String? subtitle;
-  List<String>? authors;
+  List<dynamic>? authors;
   String? publisher;
   String? publishedDate;
   String? description;
@@ -83,7 +83,7 @@ class VolumeInfo {
   ReadingModes? readingModes;
   int? pageCount;
   String? printType;
-  List<String>? categories;
+  List<dynamic>? categories;
   String? maturityRating;
   bool? allowAnonLogging;
   String? contentVersion;
@@ -119,7 +119,7 @@ class VolumeInfo {
   VolumeInfo.fromJson(Map<String, dynamic> json) {
     title = json['title'];
     subtitle = json['subtitle'];
-    authors = json['authors'].cast<String>();
+    authors = json['authors'];
     publisher = json['publisher'];
     publishedDate = json['publishedDate'];
     description = json['description'];
@@ -132,7 +132,7 @@ class VolumeInfo {
     readingModes = json['readingModes'] != null ? ReadingModes.fromJson(json['readingModes']) : null;
     pageCount = json['pageCount'];
     printType = json['printType'];
-    // categories = json['categories'].cast<String>();
+    categories = json['categories'];
     maturityRating = json['maturityRating'];
     allowAnonLogging = json['allowAnonLogging'];
     contentVersion = json['contentVersion'];

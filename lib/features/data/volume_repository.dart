@@ -27,6 +27,7 @@ class VolumeRepository {
         Endpoints.volumes,
         queryParameters: {
           "q": query,
+          "orderBy": "relevance",
         },
       );
       final volumes = Volume.fromJson(response.data);

@@ -1,8 +1,8 @@
 class Endpoints {
-  static final Endpoints _appColors = Endpoints._internal();
+  static final Endpoints _endpoints = Endpoints._internal();
 
   factory Endpoints() {
-    return _appColors;
+    return _endpoints;
   }
 
   Endpoints._internal();
